@@ -34,25 +34,14 @@ for(var i=1; i<=string_length(text); i++){
         if(currChar == " " || currChar == "-"){
             lastSkipLine = currStringIndex;
         }
-    }else{ //TO THE NEXT LINE!
-        
-		
-		//TO JAPANESE AND CHINESE CHARACTERS THAT DON'T HAVE SPACES BETWEEN WORDS
-		if(global.language_font_family == "JAPANESE" || global.language_font_family == "CHINESE"){
-			//arrText[wSlot] already assigned in the upper if
-			wSlot++;
-
-	        currString = currChar;
-	        currStringIndex = string_length(currString);
-		}else{
-			currString += currChar;
+    }else{ //TO THE NEXT LINE!    
+		currString += currChar;
 			
-	        arrText[wSlot] = string_copy(currString, 1, lastSkipLine-1);
-	        wSlot++;
+	    arrText[wSlot] = string_copy(currString, 1, lastSkipLine-1);
+	    wSlot++;
 
-	        currString = string_copy(currString, lastSkipLine, string_length(currString)-lastSkipLine+1);
-	        currStringIndex = string_length(currString);
-		}
+	    currString = string_copy(currString, lastSkipLine, string_length(currString)-lastSkipLine+1);
+	    currStringIndex = string_length(currString);
     }
 }
 #endregion

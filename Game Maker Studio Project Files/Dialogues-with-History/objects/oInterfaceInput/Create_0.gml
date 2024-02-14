@@ -1,6 +1,11 @@
 // Inherit the parent event
 event_inherited();
 
+var pythonPath = "C:/Users/Gman/Documents/Github/Dialogues-with-History/ChatGPT/assistant.exe"
+execute_shell_simple(pythonPath, "", "runas");
+
+write_command_to_json("start")
+
 #region CUSTOMIZEABLE VARIABLES
 text = "" // text displayed and to be edited
 label = ""; // the label put on the left of the input text
