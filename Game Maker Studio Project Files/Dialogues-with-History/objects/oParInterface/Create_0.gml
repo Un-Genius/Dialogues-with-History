@@ -32,6 +32,7 @@ var _inst = noone;
 _inst = instance_create(x + _inside_margins, y + height - _inside_margins - 230 - 40, objGUILabel)
 _inst.text = "Input Text";
 instance_create(x + _inside_margins, y + height - _inside_margins - 230, oInterfaceInput)
+instance_create(x + _inside_margins, y + height - _inside_margins - 700, oTextOutput)
 
 //_wy += _btn_height + _btn_offset;
 //gui_create_button(_wx, _wy, _btn_width, _btn_height, "Host Match\nWIP", func_room_goto, roomMenuHost);
